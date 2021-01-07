@@ -8,6 +8,8 @@
 </head>
 
 <body>
+    <!-- Rendering header component using x-component-name -->
+    <x-header />
     <h1>Hello, {{$name}}</h1>
 </body>
 

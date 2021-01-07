@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     // This is a global view helper
-    return view('dashboard', ['name' => 'Talha Imran']);
+    return view('dashboard', ['names' => ['Talha Imran','Hamza Imran','Hassaan Farouqui']]);
 });
 Route::get('/login', function () {
     return view('login');

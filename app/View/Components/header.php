@@ -11,9 +11,12 @@ class header extends Component
      *
      * @return void
      */
-    public function __construct()
+
+     public $title = "";
+    public function __construct($title)
     {
-        //
+        // Initialize values here
+        $this->title = $title;
     }
 
     /**
@@ -23,6 +26,8 @@ class header extends Component
      */
     public function render()
     {
+        // If variable is already initialized in the class
+        // then we don't need to pass it to the view to use it'
         return view('components.header');
     }
 }

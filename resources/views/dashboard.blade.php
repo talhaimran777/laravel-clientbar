@@ -9,7 +9,7 @@
 
 <body>
     <!-- Rendering header component using x-component-name -->
-    <x-header />
+    <x-header title="Header File" />
     <h1>Hello, {{$name}}</h1>
 </body>
 

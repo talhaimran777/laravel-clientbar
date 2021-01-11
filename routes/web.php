@@ -38,3 +38,6 @@ Route::group(['middleware' => ['protectedPages']], function(){
 Route::view("signup", "signup")->middleware('userauth');
 
 Route::get('users', [userController::class, 'getAllUsers']);
+
+
+Route::get('api/users', [userController::class, 'getDataThroughAPI']);

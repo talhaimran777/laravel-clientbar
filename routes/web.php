@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\userController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,3 +36,5 @@ Route::group(['middleware' => ['protectedPages']], function(){
 });
 
 Route::view("signup", "signup")->middleware('userauth');
+
+Route::get('users', [userController::class, 'getAllUsers']);

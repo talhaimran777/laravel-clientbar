@@ -17,9 +17,9 @@ use App\Http\Controllers\loginController;
 // Route::get('/login', function () {
     //     return view('login');
     // });
-    Route::get('/signup', function () {
-        return view('signup');
-    });
+    // Route::get('/signup', function () {
+    //     return view('signup');
+    // });
     
     Route::post('afterLogin', [loginController::class, 'handleSubmission']);
 
@@ -33,3 +33,5 @@ Route::group(['middleware' => ['protectedPages']], function(){
         return view('dashboard', ['names' => ['Talha Imran','Hamza Imran','Hassaan Farouqui']]);
     });
 });
+
+Route::view("signup", "signup")->middleware('userauth');

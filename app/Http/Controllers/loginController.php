@@ -16,4 +16,10 @@ class loginController extends Controller
         
         return $req->input();
     }
+
+    function login(Request $req){
+        
+        $req->session()->put('user_name', $req->username);
+        return redirect('/');
+    }
 }

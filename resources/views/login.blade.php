@@ -12,7 +12,7 @@
 
 <body>
     <h1>Login Page</h1>
-    <form action="afterLogin" method="POST">
+    <form action="login" method="POST">
 
         @csrf
         @error('username') <div class="alert alert-danger" role="alert">
@@ -23,9 +23,9 @@
         @error('age') <div class="alert alert-danger" role="alert">
             {{$message}} @enderror
         </div>
-        <label for="name">Enter Age:</label>
-        <input class="form-control" type="text" placeholder="Enter Age" name="age">
-        <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+        <label for="name">Enter Password:</label>
+        <input class="form-control" type="text" placeholder="Enter Password" name="password">
+        <button class="btn btn-primary" type="submit">Login</button>
     </form>
 
 

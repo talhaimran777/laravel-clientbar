@@ -8,26 +8,8 @@
 </head>
 
 <body>
-    <!-- Rendering header component using x-component-name -->
-    <x-header title="Header File" />
-    <h1>Hello all {{count($names)}} participants!</h1>
-    <h4>Using simple for loop</h4>
-    @for ($i = 0; $i < count($names); $i++) <p>{{$names[$i]}}</p>
-        @endfor
-
-
-        <h4>Using foreach loop</h4>
-        @foreach ($names as $key => $name)
-        <p>{{$name}} is defined at index {{$key}}</p>
-        @endforeach
-
-        <h4>Using forelse loop</h4>
-        @forelse ($names as $key => $name)
-        <p>{{ $name }}</p>
-        @empty
-        <p>No users</p>
-        @endforelse
-
+    <h1>Hello, {{session("user_name")}}</h1>
+    <a href="/logout">Logout</a>
 </body>
 
 </html>

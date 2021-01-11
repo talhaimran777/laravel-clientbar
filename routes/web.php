@@ -14,17 +14,22 @@ use App\Http\Controllers\loginController;
 |
 */
 
-Route::get('/', function () {
-    // This is a global view helper
-    return view('dashboard', ['names' => ['Talha Imran','Hamza Imran','Hassaan Farouqui']]);
-});
 // Route::get('/login', function () {
-//     return view('login');
-// });
-Route::get('/signup', function () {
-    return view('signup');
-});
+    //     return view('login');
+    // });
+    Route::get('/signup', function () {
+        return view('signup');
+    });
+    
+    Route::post('afterLogin', [loginController::class, 'handleSubmission']);
 
-Route::post('afterLogin', [loginController::class, 'handleSubmission']);
-Route::view("login", "login");
+    
 Route::view("noaccess", "noaccess");
+
+Route::group(['middleware' => ['protectedPages']], function(){
+    Route::view("login", "login");
+    Route::get('/', function () {
+        // This is a global view helper
+        return view('dashboard', ['names' => ['Talha Imran','Hamza Imran','Hassaan Farouqui']]);
+    });
+});

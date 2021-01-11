@@ -20,9 +20,6 @@
         </div>
         <label for="name">Enter Name:</label>
         <input class="form-control" type="text" placeholder="Enter Name" name="username">
-
-        <br>
-        <br>
         @error('age') <div class="alert alert-danger" role="alert">
             {{$message}} @enderror
         </div>

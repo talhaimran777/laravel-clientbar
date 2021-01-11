@@ -27,3 +27,4 @@ Route::get('/signup', function () {
 
 Route::post('afterLogin', [loginController::class, 'handleSubmission']);
 Route::view("login", "login");
+Route::view("noaccess", "noaccess");

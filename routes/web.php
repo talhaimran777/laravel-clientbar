@@ -65,3 +65,10 @@ Route::get("/logout", function(){
     }
 });
 Route::post('login', [loginController::class, "login"]);
+
+
+Route::get('add', function(){
+    return view('addUser');
+});
+
+Route::post('addUser', [userController::class, 'saveData']);

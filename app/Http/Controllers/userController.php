@@ -19,4 +19,15 @@ class userController extends Controller
 
         return view("display")->with('users', $data["data"]);
     }
+
+    function saveData(Request $request){
+        $user = new User();
+
+        $user->name = $request->username;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user->save();
+
+        return redirect('users');
+    }
 }

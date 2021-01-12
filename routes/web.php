@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\userController;
+use App\Http\Controllers\dbController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -80,3 +81,8 @@ Route::get('user/delete/{id}', [userController::class, 'deleteUser']);
 Route::get('user/edit/{id}', [userController::class, 'editUser']);
 
 Route::post('user/update/{id}', [userController::class, 'updateUser']);
+
+
+/* DB */
+
+Route::get('db', [dbController::class, 'db']);

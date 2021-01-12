@@ -18,3 +18,11 @@
     </tr>
     @endforeach
 </table>
+
+<span>{{$data -> links()}}</span>
+
+<style>
+.w-5 {
+    display: none;
+}
+</style>

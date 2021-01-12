@@ -8,6 +8,7 @@
         <th>Email</th>
         <th>Password</th>
         <th></th>
+        <th></th>
     </tr>
 
     @foreach($data as $user)
@@ -18,6 +19,9 @@
         <td>{{$user['password']}}</td>
         <td>
             <a href={{"user/delete/".$user['id']}}>Delete</a>
+        </td>
+        <td>
+            <a href={{"user/edit/".$user['id']}}>Edit</a>
         </td>
     </tr>
     @endforeach

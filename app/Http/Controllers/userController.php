@@ -39,6 +39,19 @@ class userController extends Controller
     }
 
 
+    function editUser($id){
+        $user = User::find($id);
+
+        return view('updateUser', ['user' => $user]);
+        // return $user;
+    }
+
+    function updateUser(Request $req, $id){
+        User::where('id',$id) ->update(['name' => $req->username, 'email' => $req->email, 'password' => $req->password]);
+        return redirect('users');
+    }
+
+
 
 
 }

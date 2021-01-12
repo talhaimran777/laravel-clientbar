@@ -75,3 +75,8 @@ Route::post('addUser', [userController::class, 'saveData']);
 
 
 Route::get('user/delete/{id}', [userController::class, 'deleteUser']);
+
+
+Route::get('user/edit/{id}', [userController::class, 'editUser']);
+
+Route::post('user/update/{id}', [userController::class, 'updateUser']);

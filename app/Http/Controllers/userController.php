@@ -8,7 +8,9 @@ use App\Models\User;
 class userController extends Controller
 {
     function getAllUsers(){
-        return User::all();
+        $data = User::all();
+
+        return view('displayUsers', ['data' => $data]);
     }
 
 

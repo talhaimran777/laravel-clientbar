@@ -30,4 +30,15 @@ class userController extends Controller
 
         return redirect('users');
     }
+
+
+    function deleteUser($id){
+        User::find($id)->delete();
+
+        return redirect('users');
+    }
+
+
+
+
 }
